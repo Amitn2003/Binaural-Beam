@@ -1,0 +1,16 @@
+{
+  "name": "Binaural Beam",
+  "short_name": "Binaural Beam - Meditation App",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "description": "Meditation & Yoga portal to relax, meditate, and track your practice.",
+  "icons": [
+    {
+      "src": "/android-chrome-512x512.png",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
