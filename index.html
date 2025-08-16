@@ -1,26 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <title>Binaural Beam</title>
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#0f172a" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/src/service-worker.js")
-            .catch(console.error);
-        });
-      }
-    </script>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Experience immersive 3D soundscape with Binaural Beam. Your go-to app for high-quality binaural audio, focus, meditation, and relaxation." />
+  <meta name="keywords" content="Binaural Beam, binaural audio, 3D sound, meditation, focus, relaxation, PWA" />
+  <title>Binaural Beam - Immersive 3D Audio Experience</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/xamawo-favicon.svg" />
+  
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Theme color for browser UI -->
+  <meta name="theme-color" content="#0f172a" />
+  
+  <!-- Apple touch icon for iOS -->
+  <link rel="apple-touch-icon" href="/xamawo-favicon.svg" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- Load built JavaScript bundle - update path if necessary after build -->
+  <script type="module" src="/assets/main.[hash].js"></script>
+
+
+  <!-- Register service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(console.error);
+      });
+    }
+  </script>
+</body>
 </html>
