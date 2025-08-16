@@ -1,9 +1,13 @@
 {
   "version": 2,
   "routes": [
+     { "src": "/service-worker.js", "dest": "/service-worker.js" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { "src": "/(.*)\\.(js|css|png|jpg|svg|ico|json)$", "dest": "/$1.$2" },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
